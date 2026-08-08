@@ -1,0 +1,2988 @@
+/* =========================================================
+   RESET
+========================================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    background:#050505;
+    color:#f5f5f7;
+
+    font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "SF Pro Display",
+    "Inter",
+    "Segoe UI",
+    Helvetica,
+    Arial,
+    sans-serif;
+
+    overflow-x:hidden;
+    letter-spacing:-0.02em;
+}
+
+
+/* =========================================================
+   VARIABLES
+========================================================= */
+
+:root{
+
+    --black:#050505;
+    --white:#f5f5f7;
+    --gray:#86868b;
+    --blue:#00bfff;
+
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.header{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+
+    padding:25px 8%;
+
+    display:flex;
+
+    justify-content:space-between;
+    align-items:center;
+
+    z-index:999;
+
+    background:
+    rgba(5,5,5,.55);
+
+    backdrop-filter:blur(20px);
+
+    border-bottom:
+    1px solid rgba(255,255,255,.08);
+
+}
+
+
+.logo{
+
+    font-size:17px;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+    line-height:1.2;
+
+}
+
+
+.logo span{
+
+    display:block;
+
+    color:#00bfff;
+
+    font-size:11px;
+
+    letter-spacing:4px;
+
+    margin-top:5px;
+
+}
+
+
+nav{
+
+    display:flex;
+
+    gap:35px;
+
+}
+
+
+nav a{
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:14px;
+
+    opacity:.8;
+
+    transition:.3s;
+
+}
+
+
+nav a:hover{
+
+    color:#00bfff;
+
+    opacity:1;
+
+}
+
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    flex-direction:column;
+
+    text-align:center;
+
+    padding:
+
+    160px 8% 80px;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:600px;
+
+    height:600px;
+
+    background:
+
+    radial-gradient(
+        circle,
+        rgba(0,191,255,.18),
+        transparent 70%
+    );
+
+    z-index:-1;
+
+}
+
+
+.hero-content{
+
+    max-width:750px;
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+
+.tag{
+
+    color:#00bfff;
+
+    font-size:12px;
+
+    letter-spacing:4px;
+
+    margin-bottom:25px;
+
+}
+
+
+.hero h1{
+
+    font-size:
+
+    clamp(42px,5vw,70px);
+
+    line-height:1;
+
+    font-weight:700;
+
+    letter-spacing:-.05em;
+
+    margin-bottom:25px;
+
+}
+
+
+.hero-text{
+
+    max-width:600px;
+
+    margin:auto;
+
+    color:#a1a1a6;
+
+    font-size:19px;
+
+    line-height:1.6;
+
+}
+
+
+
+/* =========================================================
+   IMAGEN HERO
+========================================================= */
+
+
+.hero-image{
+
+    margin-top:60px;
+
+    width:280px;
+
+    height:360px;
+
+    position:relative;
+
+}
+
+
+.hero-image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    border-radius:
+
+    140px 140px 35px 35px;
+
+    box-shadow:
+
+    0 35px 90px rgba(0,0,0,.8);
+
+}
+
+
+
+/* =========================================================
+   BOTONES
+========================================================= */
+
+
+.buttons{
+
+    margin-top:40px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:20px;
+
+}
+
+
+.btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    min-width:190px;
+
+    height:50px;
+
+    padding:0 30px;
+
+    border-radius:50px;
+
+    text-decoration:none;
+
+    font-size:14px;
+
+    transition:.3s;
+
+}
+
+
+.btn:hover{
+
+    transform:translateY(-4px);
+
+}
+
+
+.primary{
+
+    background:white;
+
+    color:black;
+
+}
+
+
+.secondary{
+
+    background:
+
+    rgba(255,255,255,.08);
+
+    color:white;
+
+    border:
+
+    1px solid rgba(255,255,255,.15);
+
+}
+
+
+
+/* =========================================================
+   SECCIONES
+========================================================= */
+
+
+section{
+
+    max-width:1150px;
+
+    margin:auto;
+
+    padding:
+
+    110px 40px;
+
+}
+
+
+.section-title p{
+
+    color:#00bfff;
+
+    letter-spacing:4px;
+
+    font-size:12px;
+
+}
+
+
+.section-title h2{
+
+    font-size:
+
+    clamp(38px,5vw,55px);
+
+    letter-spacing:-.05em;
+
+    margin-top:15px;
+
+    margin-bottom:50px;
+
+}
+/* =========================================================
+   SOBRE MI
+========================================================= */
+
+
+.about-content p{
+
+    font-size:
+
+    clamp(22px,3vw,32px);
+
+    line-height:1.5;
+
+    color:#d1d1d6;
+
+    max-width:850px;
+
+    letter-spacing:-.03em;
+
+}
+
+
+
+/* =========================================================
+   METODO / CARDS
+========================================================= */
+
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+    gap:20px;
+
+}
+
+
+.card{
+
+    background:
+
+    linear-gradient(
+        145deg,
+        #151515,
+        #0b0b0b
+    );
+
+
+    border-radius:28px;
+
+
+    padding:35px;
+
+
+    border:
+
+    1px solid rgba(255,255,255,.08);
+
+
+    transition:.3s;
+
+}
+
+
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#00bfff;
+
+}
+
+
+
+.card span{
+
+    color:#00bfff;
+
+    font-size:13px;
+
+}
+
+
+
+.card h3{
+
+    font-size:25px;
+
+    margin:20px 0;
+
+    letter-spacing:-.03em;
+
+}
+
+
+
+.card p{
+
+    color:#a1a1a6;
+
+    line-height:1.6;
+
+    font-size:15px;
+
+}
+
+
+
+/* =========================================================
+   PLANES
+========================================================= */
+
+
+.plans-container{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:stretch;
+
+    gap:20px;
+
+}
+
+
+.plan{
+
+    width:340px;
+
+    padding:40px;
+
+    border-radius:30px;
+
+
+    background:#111;
+
+
+    border:
+
+    1px solid rgba(255,255,255,.08);
+
+
+    position:relative;
+
+}
+
+
+
+.plan.featured{
+
+    background:
+
+    linear-gradient(
+        145deg,
+        #111,
+        #06304d
+    );
+
+}
+
+
+
+.badge{
+
+    position:absolute;
+
+    top:20px;
+
+    right:20px;
+
+    color:#00bfff;
+
+    font-size:12px;
+
+    letter-spacing:3px;
+
+}
+
+
+
+.plan h3{
+
+    font-size:32px;
+
+    letter-spacing:-.04em;
+
+}
+
+
+
+.plan-subtitle{
+
+    color:#00bfff;
+
+    font-size:14px;
+
+    margin-top:10px;
+
+}
+
+
+
+.description{
+
+    color:#a1a1a6;
+
+    font-size:15px;
+
+    line-height:1.6;
+
+    margin:25px 0;
+
+}
+
+
+
+.small-text{
+
+    color:#777;
+
+    font-size:13px;
+
+    line-height:1.5;
+
+    margin-bottom:25px;
+
+}
+
+
+
+.price{
+
+    font-size:35px;
+
+    margin:25px 0;
+
+    font-weight:600;
+
+}
+
+
+
+.price span{
+
+    font-size:14px;
+
+    color:#999;
+
+}
+
+
+
+.plan ul{
+
+    list-style:none;
+
+    margin-bottom:30px;
+
+}
+
+
+
+.plan li{
+
+    color:#bbb;
+
+    margin-bottom:12px;
+
+    line-height:1.5;
+
+}
+
+
+
+.plan-btn{
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+
+
+.plan-btn:hover{
+
+    transform:translateY(-5px);
+
+}
+
+
+
+.plan-btn.selected{
+
+    background:#00bfff;
+
+    color:white;
+
+    transform:scale(1.05);
+
+}
+
+
+
+/* =========================================================
+   COMPARATIVA DE PLANES
+========================================================= */
+
+
+.plans-comparison{
+
+    margin:70px auto 0;
+
+    width:100%;
+
+    max-width:900px;
+
+
+    background:#111;
+
+
+    border:
+
+    1px solid rgba(255,255,255,.08);
+
+
+    border-radius:30px;
+
+
+    overflow:hidden;
+
+}
+
+
+
+.comparison-header,
+.comparison-row{
+
+    display:grid;
+
+
+    grid-template-columns:
+
+    2.4fr 1fr 1fr;
+
+
+    align-items:center;
+
+}
+
+
+
+.comparison-header{
+
+    padding:22px 35px;
+
+
+    background:#171717;
+
+
+    border-bottom:
+
+    1px solid rgba(255,255,255,.08);
+
+}
+
+
+
+.comparison-plan{
+
+    text-align:center;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    color:white;
+
+    letter-spacing:.08em;
+
+}
+
+
+
+.comparison-plan.featured{
+
+    color:#00bfff;
+
+}
+
+
+
+.comparison-row{
+
+    padding:18px 35px;
+
+
+    border-bottom:
+
+    1px solid rgba(255,255,255,.06);
+
+
+    transition:.25s;
+
+}
+
+
+
+.comparison-row:last-of-type{
+
+    border-bottom:none;
+
+}
+
+
+
+.comparison-row:hover{
+
+    background:
+
+    rgba(255,255,255,.03);
+
+}
+
+
+
+.comparison-row span{
+
+    color:#d1d1d6;
+
+    font-size:15px;
+
+}
+
+
+
+.comparison-row strong{
+
+    text-align:center;
+
+    color:white;
+
+    font-size:14px;
+
+}
+
+
+
+/* =========================================================
+   CTA COMPARATIVA
+========================================================= */
+
+
+.comparison-footer{
+
+    padding:45px 35px;
+
+    text-align:center;
+
+
+    border-top:
+
+    1px solid rgba(255,255,255,.08);
+
+
+    background:
+
+    linear-gradient(
+        180deg,
+        #111,
+        #0b2030
+    );
+
+}
+
+
+
+.comparison-footer p{
+
+    color:#a1a1a6;
+
+    margin-bottom:25px;
+
+    line-height:1.7;
+
+}
+
+
+
+.comparison-footer .btn{
+
+    min-width:260px;
+
+}
+/* =========================================================
+   MODAL SOBRE MI
+========================================================= */
+
+
+.about-overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    width:100vw;
+
+    height:100vh;
+
+
+    background:
+
+    rgba(0,0,0,.70);
+
+
+    backdrop-filter:blur(12px);
+
+    -webkit-backdrop-filter:blur(12px);
+
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+
+    padding:40px;
+
+
+    opacity:0;
+
+    visibility:hidden;
+
+
+    pointer-events:none;
+
+
+    transition:.35s ease;
+
+
+    z-index:999999;
+
+}
+
+
+
+.about-overlay.active{
+
+    opacity:1;
+
+    visibility:visible;
+
+    pointer-events:auto;
+
+}
+
+
+
+.about-panel{
+
+    position:relative;
+
+
+    width:
+
+    min(950px,92vw);
+
+
+    max-height:90vh;
+
+
+    overflow-y:auto;
+
+
+    background:#111;
+
+
+    color:white;
+
+
+    border-radius:28px;
+
+
+    padding:60px;
+
+
+    border:
+
+    1px solid rgba(255,255,255,.08);
+
+
+    box-shadow:
+
+    0 30px 90px rgba(0,0,0,.45);
+
+
+    transform:
+
+    translateY(30px) scale(.96);
+
+
+    opacity:0;
+
+
+    transition:.35s ease;
+
+}
+
+
+
+.about-overlay.active .about-panel{
+
+    transform:
+
+    translateY(0) scale(1);
+
+
+    opacity:1;
+
+}
+
+
+
+.about-panel::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+
+
+.about-panel::-webkit-scrollbar-thumb{
+
+    background:#444;
+
+    border-radius:20px;
+
+}
+
+
+
+#closeAbout{
+
+    position:absolute;
+
+
+    top:20px;
+
+    right:20px;
+
+
+    width:46px;
+
+    height:46px;
+
+
+    border:none;
+
+
+    border-radius:50%;
+
+
+    background:
+
+    rgba(255,255,255,.08);
+
+
+    color:white;
+
+
+    font-size:28px;
+
+
+    cursor:pointer;
+
+
+    transition:.25s;
+
+}
+
+
+
+#closeAbout:hover{
+
+    background:white;
+
+    color:#111;
+
+}
+
+
+
+.about-panel span{
+
+    color:#00bfff;
+
+    font-size:12px;
+
+    letter-spacing:4px;
+
+}
+
+
+
+.about-panel h2{
+
+    font-size:55px;
+
+    letter-spacing:-.06em;
+
+    margin:20px 0;
+
+}
+
+
+
+.about-panel>p{
+
+    color:#b5b5b5;
+
+    font-size:18px;
+
+    line-height:1.7;
+
+}
+
+
+
+.about-box{
+
+    margin-top:35px;
+
+
+    padding:25px;
+
+
+    background:#111;
+
+
+    border-radius:22px;
+
+
+    border:
+
+    1px solid rgba(255,255,255,.08);
+
+}
+
+
+
+.about-box h3{
+
+    margin-bottom:10px;
+
+    font-size:20px;
+
+}
+
+
+
+.about-box p{
+
+    color:#999;
+
+    line-height:1.5;
+
+}
+
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+
+footer{
+
+    text-align:center;
+
+
+    padding:40px;
+
+
+    color:#777;
+
+
+    font-size:13px;
+
+}
+
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+
+@media(max-width:900px){
+
+
+    .header{
+
+        padding:20px;
+
+    }
+
+
+    nav{
+
+        display:none;
+
+    }
+
+
+    .hero{
+
+        padding:
+
+        140px 25px 80px;
+
+    }
+
+
+    .hero h1{
+
+        font-size:48px;
+
+    }
+
+
+
+    .hero-text{
+
+        font-size:17px;
+
+    }
+
+
+
+    .buttons{
+
+        flex-direction:column;
+
+        width:100%;
+
+    }
+
+
+
+    .buttons .btn{
+
+        width:100%;
+
+        max-width:300px;
+
+    }
+
+
+
+    section{
+
+        padding:
+
+        80px 25px;
+
+    }
+
+
+
+    .cards{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+
+    .card{
+
+        padding:30px;
+
+    }
+
+
+
+    .plans-container{
+
+        flex-direction:column;
+
+        align-items:center;
+
+    }
+
+
+
+    .plan{
+
+        width:100%;
+
+        max-width:380px;
+
+    }
+
+
+
+    .comparison-header,
+    .comparison-row{
+
+        grid-template-columns:
+
+        1.8fr 1fr 1fr;
+
+    }
+
+
+
+    .comparison-header,
+    .comparison-row{
+
+        padding-left:20px;
+
+        padding-right:20px;
+
+    }
+
+
+
+    .about-overlay{
+
+        padding:18px;
+
+    }
+
+
+
+    .about-panel{
+
+        width:100%;
+
+        padding:35px;
+
+        max-height:90vh;
+
+    }
+
+
+
+    .about-panel h2{
+
+        font-size:40px;
+
+    }
+
+}
+
+
+
+@media(max-width:500px){
+
+
+    .logo{
+
+        font-size:15px;
+
+    }
+
+
+
+    .hero h1{
+
+        font-size:40px;
+
+    }
+
+
+
+    .hero-image{
+
+        width:240px;
+
+        height:320px;
+
+    }
+
+
+
+    .section-title h2{
+
+        font-size:34px;
+
+    }
+
+
+
+    .plan{
+
+        padding:30px;
+
+    }
+
+
+
+    .price{
+
+        font-size:32px;
+
+    }
+
+
+
+    .comparison-header,
+    .comparison-row{
+
+        font-size:12px;
+
+    }
+
+}
+.comparison-footer{
+
+    padding:40px 35px;
+
+    text-align:center;
+
+    background:
+    linear-gradient(
+        180deg,
+        rgba(255,255,255,.03),
+        rgba(0,191,255,.08)
+    );
+
+    border-top:
+    1px solid rgba(255,255,255,.08);
+
+}
+
+
+.comparison-footer p{
+
+    max-width:600px;
+
+    margin:0 auto 25px;
+
+    color:#a1a1a6;
+
+    line-height:1.6;
+
+    font-size:15px;
+
+}
+
+
+.comparison-footer .btn{
+
+    display:inline-flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    min-width:260px;
+
+}
+.about-image{
+    width:100%;
+    height:280px;
+    overflow:hidden;
+    border-radius:25px;
+    margin-bottom:35px;
+}
+
+
+.about-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+/* =========================================================
+METODO / CARDS AJUSTADO
+========================================================= */
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+    gap:30px;
+
+    align-items:stretch;
+
+}
+
+
+.card{
+
+    background:
+
+    linear-gradient(
+        145deg,
+        #151515,
+        #0b0b0b
+    );
+
+
+    border-radius:30px;
+
+
+    padding:45px;
+
+
+    min-height:260px;
+
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:flex-start;
+
+
+    border:
+
+    1px solid rgba(255,255,255,.08);
+
+
+    transition:.35s ease;
+
+}
+
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#00bfff;
+
+}
+
+
+
+/* etiqueta superior */
+
+.card span{
+
+    color:#00bfff;
+
+    font-size:12px;
+
+    letter-spacing:3px;
+
+    margin-bottom:15px;
+
+}
+
+
+
+/* titulo */
+
+.card h3{
+
+    font-size:
+
+    clamp(24px,2.5vw,32px);
+
+
+    line-height:1.1;
+
+
+    letter-spacing:-.04em;
+
+
+    margin-bottom:25px;
+
+}
+
+
+
+/* texto */
+
+.card p{
+
+    color:#a1a1a6;
+
+    font-size:16px;
+
+    line-height:1.7;
+
+    max-width:420px;
+
+}
+
+
+
+/* listas dentro de metodo */
+
+.card ul{
+
+    margin-top:10px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:14px;
+
+    list-style:none;
+
+}
+
+
+
+.card li{
+
+    position:relative;
+
+    padding-left:25px;
+
+    color:#cfcfcf;
+
+    font-size:15px;
+
+    line-height:1.5;
+
+}
+
+
+
+.card li::before{
+
+    content:"✓";
+
+    position:absolute;
+
+    left:0;
+
+    color:#00bfff;
+
+    font-weight:600;
+
+}
+/* =========================================================
+MENU MOVIL AJUSTADO
+========================================================= */
+
+@media(max-width:900px){
+
+    .header{
+
+        padding:20px 25px;
+
+    }
+
+
+    nav{
+
+        display:flex;
+
+        gap:15px;
+
+        align-items:center;
+
+        max-width:65%;
+
+        overflow-x:auto;
+
+        scrollbar-width:none;
+
+    }
+
+
+    nav::-webkit-scrollbar{
+
+        display:none;
+
+    }
+
+
+    nav a{
+
+        font-size:12px;
+
+        white-space:nowrap;
+
+        color:white;
+
+        opacity:.85;
+
+    }
+
+
+    nav a:hover{
+
+        color:#00bfff;
+
+        opacity:1;
+
+    }
+
+}
+
+
+/* CELULARES PEQUEÑOS */
+
+@media(max-width:500px){
+
+    .header{
+
+        padding:18px 20px;
+
+    }
+
+
+    .logo{
+
+        font-size:14px;
+
+    }
+
+
+    nav{
+
+        gap:12px;
+
+        max-width:60%;
+
+    }
+
+
+    nav a{
+
+        font-size:11px;
+
+    }
+
+}
+/* =========================================================
+AJUSTE METODO MOVIL
+========================================================= */
+
+@media(max-width:900px){
+
+    .cards{
+
+        display:flex;
+
+        flex-direction:column;
+
+        gap:20px;
+
+        width:100%;
+
+    }
+
+
+    .card{
+
+        width:100%;
+
+        min-height:auto;
+
+        padding:28px 25px;
+
+        border-radius:25px;
+
+    }
+
+
+    .card span{
+
+        font-size:11px;
+
+        letter-spacing:3px;
+
+        margin-bottom:12px;
+
+    }
+
+
+    .card h3{
+
+        font-size:26px;
+
+        line-height:1.15;
+
+        margin-bottom:18px;
+
+    }
+
+
+    .card p{
+
+        font-size:15px;
+
+        line-height:1.6;
+
+        max-width:100%;
+
+    }
+
+
+    .card ul{
+
+        margin-top:5px;
+
+        gap:12px;
+
+    }
+
+
+    .card li{
+
+        font-size:14px;
+
+        line-height:1.5;
+
+        padding-left:22px;
+
+    }
+
+
+    .card li::before{
+
+        font-size:13px;
+
+    }
+
+}
+
+
+/* CELULARES PEQUEÑOS */
+
+@media(max-width:500px){
+
+    .cards{
+
+        gap:16px;
+
+    }
+
+
+    .card{
+
+        padding:25px 20px;
+
+        border-radius:22px;
+
+    }
+
+
+    .card h3{
+
+        font-size:23px;
+
+    }
+
+
+    .card p,
+    .card li{
+
+        font-size:14px;
+
+    }
+
+}
+/* =========================================================
+METODO - MOBILE FULL WIDTH
+========================================================= */
+
+@media(max-width:900px){
+
+    #method .cards{
+
+        display:flex;
+
+        flex-direction:column;
+
+        width:100%;
+
+        gap:25px;
+
+    }
+
+
+    #method .card{
+
+        width:100%;
+
+        display:flex;
+
+        flex-direction:column;
+
+        padding:35px 28px;
+
+        min-height:auto;
+
+        border-radius:28px;
+
+    }
+
+
+    #method .card span{
+
+        margin-bottom:15px;
+
+        text-align:left;
+
+    }
+
+
+    #method .card h3{
+
+        text-align:left;
+
+        font-size:28px;
+
+        margin-bottom:20px;
+
+    }
+
+
+    #method .card p{
+
+        text-align:left;
+
+        max-width:100%;
+
+        font-size:16px;
+
+    }
+
+
+    #method .card ul{
+
+        width:100%;
+
+        padding:0;
+
+        margin:0;
+
+    }
+
+
+    #method .card li{
+
+        text-align:left;
+
+        width:100%;
+
+        font-size:15px;
+
+    }
+
+}
+
+
+
+/* CELULARES PEQUEÑOS */
+
+@media(max-width:500px){
+
+    #method .cards{
+
+        gap:18px;
+
+    }
+
+
+    #method .card{
+
+        padding:28px 22px;
+
+        border-radius:24px;
+
+    }
+
+
+    #method .card h3{
+
+        font-size:24px;
+
+    }
+
+
+    #method .card p,
+    #method .card li{
+
+        font-size:14px;
+
+    }
+
+}
+/* =========================================================
+   MODAL — CONOCER EL MÉTODO
+   ========================================================= */
+
+.method-overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    width:100vw;
+
+    height:100vh;
+
+    background:
+    rgba(0,0,0,.70);
+
+    backdrop-filter:blur(12px);
+
+    -webkit-backdrop-filter:blur(12px);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:40px;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    pointer-events:none;
+
+    transition:.35s ease;
+
+    z-index:999998;
+}
+
+
+.method-overlay.active{
+
+    opacity:1;
+
+    visibility:visible;
+
+    pointer-events:auto;
+}
+
+
+.method-panel{
+
+    position:relative;
+
+    width:min(950px,92vw);
+
+    max-height:90vh;
+
+    overflow-y:auto;
+
+    background:#111;
+
+    color:white;
+
+    border-radius:28px;
+
+    padding:60px;
+
+    border:
+    1px solid rgba(255,255,255,.08);
+
+    box-shadow:
+    0 30px 90px rgba(0,0,0,.45);
+
+    transform:
+    translateY(30px) scale(.96);
+
+    opacity:0;
+
+    transition:.35s ease;
+}
+
+
+.method-overlay.active .method-panel{
+
+    transform:
+    translateY(0) scale(1);
+
+    opacity:1;
+}
+
+
+.method-panel::-webkit-scrollbar{
+
+    width:8px;
+}
+
+
+.method-panel::-webkit-scrollbar-thumb{
+
+    background:#444;
+
+    border-radius:20px;
+}
+
+
+#closeMethod{
+
+    position:absolute;
+
+    top:20px;
+
+    right:20px;
+
+    width:46px;
+
+    height:46px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:
+    rgba(255,255,255,.08);
+
+    color:white;
+
+    font-size:28px;
+
+    cursor:pointer;
+
+    transition:.25s;
+}
+
+
+#closeMethod:hover{
+
+    background:white;
+
+    color:#111;
+}
+
+
+.method-panel span{
+
+    color:#00bfff;
+
+    font-size:12px;
+
+    letter-spacing:4px;
+}
+
+
+.method-panel h2{
+
+    font-size:55px;
+
+    letter-spacing:-.06em;
+
+    margin:20px 0 45px;
+}
+
+
+.method-panel .comparison-header,
+.method-panel .comparison-row{
+
+    display:grid;
+
+    grid-template-columns:
+    2.4fr 1fr 1fr;
+
+    align-items:center;
+}
+
+
+.method-panel .comparison-header{
+
+    padding:22px 35px;
+
+    background:#171717;
+
+    border-bottom:
+    1px solid rgba(255,255,255,.08);
+}
+
+
+.method-panel .comparison-plan{
+
+    text-align:center;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    color:white;
+
+    letter-spacing:.08em;
+}
+
+
+.method-panel .comparison-plan.featured{
+
+    color:#00bfff;
+}
+
+
+.method-panel .comparison-row{
+
+    padding:18px 35px;
+
+    border-bottom:
+    1px solid rgba(255,255,255,.06);
+
+    transition:.25s;
+}
+
+
+.method-panel .comparison-row:hover{
+
+    background:
+    rgba(255,255,255,.03);
+}
+
+
+.method-panel .comparison-row span{
+
+    color:#d1d1d6;
+
+    font-size:15px;
+}
+
+
+.method-panel .comparison-row strong{
+
+    text-align:center;
+
+    color:white;
+
+    font-size:14px;
+}
+
+
+.method-panel .comparison-footer{
+
+    padding:40px 35px;
+
+    text-align:center;
+
+    background:
+    linear-gradient(
+        180deg,
+        rgba(255,255,255,.03),
+        rgba(0,191,255,.08)
+    );
+
+    border-top:
+    1px solid rgba(255,255,255,.08);
+}
+
+
+.method-panel .comparison-footer p{
+
+    max-width:600px;
+
+    margin:0 auto;
+
+    color:#a1a1a6;
+
+    line-height:1.6;
+
+    font-size:15px;
+}
+
+
+@media(max-width:900px){
+
+    .method-overlay{
+
+        padding:18px;
+
+    }
+
+
+    .method-panel{
+
+        width:100%;
+
+        max-height:90vh;
+
+        padding:35px;
+
+        border-radius:25px;
+
+    }
+
+
+    .method-panel h2{
+
+        font-size:40px;
+
+        margin-bottom:35px;
+
+    }
+
+
+    .method-panel .comparison-header,
+    .method-panel .comparison-row{
+
+        grid-template-columns:
+        1.8fr 1fr 1fr;
+
+        padding-left:20px;
+
+        padding-right:20px;
+
+    }
+
+
+    .method-panel .comparison-row{
+
+        padding-top:16px;
+
+        padding-bottom:16px;
+
+    }
+
+
+    .method-panel .comparison-row span{
+
+        font-size:14px;
+
+    }
+
+
+    .method-panel .comparison-row strong{
+
+        font-size:12px;
+
+    }
+
+
+    .method-panel .comparison-footer{
+
+        padding:35px 20px;
+
+    }
+
+}
+
+
+@media(max-width:500px){
+
+    .method-overlay{
+
+        padding:12px;
+
+    }
+
+
+    .method-panel{
+
+        padding:28px 18px;
+
+        border-radius:22px;
+
+    }
+
+
+    #closeMethod{
+
+        width:42px;
+
+        height:42px;
+
+        top:15px;
+
+        right:15px;
+
+        font-size:25px;
+
+    }
+
+
+    .method-panel h2{
+
+        font-size:34px;
+
+        padding-right:45px;
+
+        margin-bottom:28px;
+
+    }
+
+
+    .method-panel .comparison-header,
+    .method-panel .comparison-row{
+
+        grid-template-columns:
+        1.7fr 1fr 1fr;
+
+        padding-left:12px;
+
+        padding-right:12px;
+
+    }
+
+
+    .method-panel .comparison-header{
+
+        padding-top:17px;
+
+        padding-bottom:17px;
+
+    }
+
+
+    .method-panel .comparison-row{
+
+        padding-top:15px;
+
+        padding-bottom:15px;
+
+    }
+
+
+    .method-panel .comparison-row span{
+
+        font-size:12px;
+
+        line-height:1.4;
+
+    }
+
+
+    .method-panel .comparison-row strong{
+
+        font-size:11px;
+
+        line-height:1.3;
+
+    }
+
+
+    .method-panel .comparison-plan{
+
+        font-size:12px;
+
+    }
+
+
+    .method-panel .comparison-footer{
+
+        padding:30px 15px;
+
+    }
+
+
+    .method-panel .comparison-footer p{
+
+        font-size:14px;
+
+        line-height:1.6;
+
+    }
+
+}
+/* =========================================================
+   RESPONSIVE GLOBAL — ADAPTACIÓN A CUALQUIER DISPOSITIVO
+   ========================================================= */
+
+*,
+*::before,
+*::after{
+    box-sizing:border-box;
+}
+
+html{
+    width:100%;
+    max-width:100%;
+    overflow-x:hidden;
+}
+
+body{
+    width:100%;
+    max-width:100%;
+    overflow-x:hidden;
+}
+
+/* Evita que imágenes o elementos grandes
+   desborden la pantalla */
+
+img,
+video,
+iframe{
+    max-width:100%;
+}
+
+
+/* =========================================================
+   SECCIONES
+   ========================================================= */
+
+section{
+    width:100%;
+    max-width:1150px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero{
+    width:100%;
+    min-height:100svh;
+}
+
+.hero-content{
+    width:100%;
+    max-width:750px;
+}
+
+.hero-text{
+    width:100%;
+}
+
+
+/* =========================================================
+   BOTONES
+   ========================================================= */
+
+.buttons{
+    width:100%;
+}
+
+.btn{
+    max-width:100%;
+}
+
+
+/* =========================================================
+   CARDS
+   ========================================================= */
+
+.cards{
+    width:100%;
+}
+
+.card{
+    min-width:0;
+    width:100%;
+}
+
+.card p,
+.card li{
+    overflow-wrap:break-word;
+}
+
+
+/* =========================================================
+   PLANES
+   ========================================================= */
+
+.plans-container{
+    width:100%;
+}
+
+.plan{
+    min-width:0;
+    max-width:100%;
+}
+
+
+/* =========================================================
+   COMPARATIVA
+   ========================================================= */
+
+.plans-comparison{
+    width:100%;
+    max-width:900px;
+}
+
+.comparison-header,
+.comparison-row{
+    min-width:0;
+}
+
+.comparison-row span,
+.comparison-row strong{
+    min-width:0;
+    overflow-wrap:break-word;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer{
+    width:100%;
+    max-width:100%;
+    margin:0;
+    padding:40px 20px;
+    text-align:center;
+
+    background:transparent;
+
+    border:none;
+
+    box-shadow:none;
+}
+
+footer::before,
+footer::after{
+    display:none;
+    content:none;
+}
+
+footer a{
+    color:#f5f5f7;
+    text-decoration:none;
+}
+
+footer p{
+    margin-top:12px;
+    color:#777;
+    line-height:1.6;
+}
+
+
+/* =========================================================
+   MODALES
+   ========================================================= */
+
+.about-overlay,
+.method-overlay{
+    width:100%;
+    height:100%;
+    min-height:100svh;
+}
+
+.about-panel,
+.method-panel{
+    width:min(950px, calc(100vw - 36px));
+    max-width:950px;
+    min-width:0;
+}
+
+.about-panel *,
+.method-panel *{
+    max-width:100%;
+}
+
+
+/* =========================================================
+   TABLETS
+   ========================================================= */
+
+@media(max-width:900px){
+
+    section{
+        padding-left:25px;
+        padding-right:25px;
+    }
+
+
+    .hero{
+        padding-left:25px;
+        padding-right:25px;
+    }
+
+
+    .plans-container{
+        flex-direction:column;
+        align-items:center;
+    }
+
+
+    .plan{
+        width:100%;
+        max-width:380px;
+    }
+
+
+    .cards{
+        grid-template-columns:1fr;
+    }
+
+
+    .about-panel,
+    .method-panel{
+        width:calc(100vw - 36px);
+        max-height:90svh;
+    }
+
+}
+
+
+/* =========================================================
+   CELULARES
+   ========================================================= */
+
+@media(max-width:600px){
+
+    section{
+        padding-left:20px;
+        padding-right:20px;
+    }
+
+
+    .hero{
+        padding-left:20px;
+        padding-right:20px;
+    }
+
+
+    .hero h1{
+        font-size:clamp(36px,10vw,48px);
+    }
+
+
+    .hero-text{
+        font-size:16px;
+        line-height:1.6;
+    }
+
+
+    .buttons{
+        flex-direction:column;
+        gap:12px;
+    }
+
+
+    .buttons .btn{
+        width:100%;
+        max-width:320px;
+    }
+
+
+    .hero-image{
+        width:min(240px,70vw);
+        height:min(320px,95vw);
+    }
+
+
+    .section-title h2{
+        font-size:clamp(32px,9vw,40px);
+    }
+
+
+    .about-content p{
+        font-size:clamp(20px,6vw,28px);
+    }
+
+
+    .plan{
+        width:100%;
+        max-width:100%;
+        padding:28px 22px;
+    }
+
+
+    .price{
+        font-size:32px;
+    }
+
+
+    /* Comparativa */
+
+    .plans-comparison{
+        border-radius:22px;
+    }
+
+
+    .comparison-header,
+    .comparison-row{
+        grid-template-columns:
+        1.7fr 1fr 1fr;
+        padding-left:14px;
+        padding-right:14px;
+    }
+
+
+    .comparison-row span{
+        font-size:12px;
+        line-height:1.4;
+    }
+
+
+    .comparison-row strong{
+        font-size:11px;
+    }
+
+
+    .comparison-plan{
+        font-size:11px;
+    }
+
+
+    /* Footer */
+
+    footer{
+        padding:35px 18px;
+        font-size:12px;
+    }
+
+
+    footer p{
+        font-size:11px;
+    }
+
+
+    /* Modal */
+
+    .about-overlay,
+    .method-overlay{
+        padding:12px;
+    }
+
+
+    .about-panel,
+    .method-panel{
+        width:100%;
+        max-height:92svh;
+        padding:28px 18px;
+        border-radius:22px;
+    }
+
+
+    .about-panel h2,
+    .method-panel h2{
+        font-size:clamp(32px,9vw,40px);
+    }
+
+}
+
+
+/* =========================================================
+   CELULARES MUY PEQUEÑOS
+   ========================================================= */
+
+@media(max-width:380px){
+
+    .header{
+        padding:16px 15px;
+    }
+
+
+    .logo{
+        font-size:13px;
+    }
+
+
+    nav{
+        gap:9px;
+        max-width:62%;
+    }
+
+
+    nav a{
+        font-size:10px;
+    }
+
+
+    section{
+        padding-left:16px;
+        padding-right:16px;
+    }
+
+
+    .hero{
+        padding-left:16px;
+        padding-right:16px;
+    }
+
+
+    .hero h1{
+        font-size:34px;
+    }
+
+
+    .hero-text{
+        font-size:15px;
+    }
+
+
+    .card{
+        padding:24px 18px;
+        border-radius:22px;
+    }
+
+
+    .card h3{
+        font-size:22px;
+    }
+
+
+    .card p,
+    .card li{
+        font-size:13px;
+    }
+
+
+    .plan{
+        padding:25px 18px;
+    }
+
+
+    footer{
+        padding-left:15px;
+        padding-right:15px;
+    }
+
+
+    .about-panel,
+    .method-panel{
+        padding:25px 15px;
+    }
+
+}
+
+
+/* =========================================================
+   DISPOSITIVOS ALTOS / PANTALLAS GRANDES
+   ========================================================= */
+
+@media(min-width:1400px){
+
+    section{
+        max-width:1200px;
+    }
+
+
+    .hero-content{
+        max-width:850px;
+    }
+
+
+    .hero h1{
+        font-size:76px;
+    }
+
+}
+
+
+/* =========================================================
+   PANTALLAS TÁCTILES
+   ========================================================= */
+
+@media(hover:none){
+
+    .card:hover,
+    .btn:hover,
+    .plan-btn:hover{
+        transform:none;
+    }
+
+}
+
+
+/* =========================================================
+   RESPETO A REDUCCIÓN DE MOVIMIENTO
+   ========================================================= */
+
+@media(prefers-reduced-motion:reduce){
+
+    *,
+    *::before,
+    *::after{
+        scroll-behavior:auto !important;
+        transition:none !important;
+        animation:none !important;
+    }
+
+}
